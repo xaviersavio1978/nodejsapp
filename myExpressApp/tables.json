@@ -1,0 +1,8 @@
+{
+  "main": {
+    "FormSubmissions": "FormSubmissions",
+  },
+  "test": {
+    "FormSubmissions": "FormSubmissionstest",
+  }
+}
