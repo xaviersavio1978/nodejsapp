@@ -53,7 +53,7 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7B14D5B7497D459C9C66DAEE3521FA61 }}
+          client-id: ${{ secrets.CLIENTID_TEST }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DF3C0B36870C40CCA467068E9F62F696 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B45E3A3325724DDCA7632E247299FF04 }}
 
@@ -63,6 +63,7 @@ jobs:
           app-name: 'testsavxav'
           package: node-app  # now contains the app files directly
           slot-name: 'Production'
+
 
 
 
