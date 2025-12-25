@@ -1,8 +1,0 @@
-# Prevent merging of GitHub Actions workflow files
-.github/* merge=ours
-
-# Optional: prevent merging of branch-specific table configs
-# tables.json merge=ours 
-
-# Add other files or folders you never want to overwrite
-.env merge=ours
