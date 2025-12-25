@@ -7,8 +7,26 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <p>This is your Node.js Express app running on Azure Web App!</p> <!-- new text added -->
+    <p>This is your Node.js Express app running on Azure Web App!</p>
     <p>Enjoy exploring your application!</p>
-    <p>Start learning lot on n8n dont stop learning!</p> <!-- more text -->
+    <p>Start learning a lot on n8n, don't stop learning!</p>
+
+    <!-- Form -->
+    <h2>Contact Form</h2>
+    <form action="/submit-form" method="POST">
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" name="name" required /><br /><br />
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" name="email" required /><br /><br />
+
+      <label for="address">Address:</label><br />
+      <input type="text" id="address" name="address" /><br /><br />
+
+      <label for="phone">Phone Number:</label><br />
+      <input type="tel" id="phone" name="phone" /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
