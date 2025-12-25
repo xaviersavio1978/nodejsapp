@@ -14,7 +14,7 @@ var app = express();
 // Azure Table Storage setup
 const account = process.env.AZURE_STORAGE_ACCOUNT_NAME;
 const accountKey = process.env.AZURE_STORAGE_ACCOUNT_KEY;
-const tableName = "FormSubmissions";
+const tableName = "FormSubmissionstest";
 
 const credential = new AzureNamedKeyCredential(account, accountKey);
 const client = new TableClient(
