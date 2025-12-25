@@ -1,9 +1,9 @@
-name: Build and deploy Node.js app to Azure Web App - testwebsav
+name: Build and deploy Node.js app to Azure Web App - testsavxav
 
 on:
   push:
     branches:
-      - main
+      - test
   workflow_dispatch:
 
 jobs:
@@ -44,6 +44,8 @@ jobs:
       contents: read
 
     steps:
+      - name: Set branch name
+        run: echo "BRANCH_NAME=${GITHUB_REF_NAME}" >> $GITHUB_ENV
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
@@ -53,13 +55,18 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_7B14D5B7497D459C9C66DAEE3521FA61 }}
+          client-id: ${{ secrets.CLIENTID_TEST }}
           tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DF3C0B36870C40CCA467068E9F62F696 }}
           subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_B45E3A3325724DDCA7632E247299FF04 }}
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'testwebsav'
+          app-name: 'testsavxav'
           package: node-app  # now contains the app files directly
           slot-name: 'Production'
+
+
+
+
+
