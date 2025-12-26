@@ -1,4 +1,4 @@
-name: Build and deploy Node.js app to Azure Web App - testsavxav
+name: Build and deploy Node.js app to Azure Web App - testsavxav test
 
 on:
   push:
